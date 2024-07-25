@@ -1,7 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
-
-// components
 import Social from "@/components/Social";
 import Photo from "@/components/Photo";
 
@@ -14,10 +12,10 @@ const Home = () => {
           <div className="text-center xl:text-left">
             <span className="text-xl">Web Developer</span>
             <h1 className="h1 mb-6">
-              Hello I'm <br /> <span className="text-accent">Jastine Earl</span>
+              Hello, I'm <br /> <span className="text-accent">Jastine Earl</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              I excel at crafting elegant digital experience and I am proficient
+              I excel at crafting elegant digital experiences and am proficient
               in various programming languages and technologies.
             </p>
 
@@ -32,10 +30,9 @@ const Home = () => {
                 <FiDownload className="text-xl" />
               </Button>
               <div className="mb-8 xl:mb-0">
-                <Social 
-                containerStyles="flex gap-4" 
-                iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500" 
-
+                <Social
+                  containerStyles="flex gap-4"
+                  iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500"
                 />
               </div>
             </div>
