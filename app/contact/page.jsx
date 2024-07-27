@@ -25,7 +25,11 @@ const info = [
   {
     icon: <FaEnvelope />,
     title: "Email",
-    description: "buenavistajastineearl@gmailcom",
+    description: (
+      <a href="mailto:buenavistajastineearl@gmail.com" className="text-white">
+        buenavistajastineearl@gmail.com
+      </a>
+    ),
   },
   {
     icon: <FaMapMarkerAlt />,
@@ -57,8 +61,7 @@ const Contact = () => {
             <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
               <h3 className="text-4xl text-accent">Let's work together</h3>
               <p className="text-white/60">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                I'd love hearing from you or just say hello.
               </p>
               {/* input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -69,7 +72,7 @@ const Contact = () => {
               </div>
               {/* select */}
 
-              <Select>
+              {/* <Select>
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select a service" />
                 </SelectTrigger>
@@ -81,7 +84,7 @@ const Contact = () => {
                     <SelectItem value="mst">Logo Design</SelectItem>
                   </SelectGroup>
                 </SelectContent>
-              </Select>
+              </Select> */}
               {/* textarea */}
               <Textarea
                 className="h-[200px]"

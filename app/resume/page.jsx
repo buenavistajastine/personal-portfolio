@@ -9,18 +9,22 @@ import {
   FaWordpress,
   FaPhp,
   FaPython,
-  FaBootstrap
+  FaBootstrap,
 } from "react-icons/fa";
-import { SiTailwindcss, SiNextdotjs, SiMysql, SiLivewire } from "react-icons/si";
+import {
+  SiTailwindcss,
+  SiNextdotjs,
+  SiMysql,
+  SiLivewire,
+} from "react-icons/si";
 
 const about = {
   title: "About me",
-  description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  description: "Here’s a bit more about me and my journey in web development.",
   info: [
     {
       fieldName: "Name",
-      fieldValue: "Jastine Earl",
+      fieldValue: "Jastine Earl Buenavista",
     },
 
     {
@@ -34,9 +38,8 @@ const about = {
 
     {
       fieldName: "Experience",
-      fieldValue: "11 Months",
+      fieldValue: "11 Months (started in August 2023)",
     },
-    
 
     {
       fieldName: "Address",
@@ -50,7 +53,7 @@ const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My experience",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "As a web developer, I specialize in designing and building intuitive and visually appealing digital experiences. With knowledge of various programming languages and technologies, I make complex ideas easy to use and visually engaging.",
   items: [
     {
       company: "Bluebeans Systems Inc.",
@@ -65,7 +68,7 @@ const education = {
   icon: "/assets/resume/cap.svg",
   title: "My education",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "I have a Bachelor Degree in Information Technology from NORSU, where I learned the essentials of web development and programming. My education provided me with the skills to create effective and engaging digital solutions.",
   items: [
     {
       school: "Valencia National High School",
@@ -84,7 +87,7 @@ const education = {
 const skills = {
   title: "My skills",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "I am skilled in various programming languages and web technologies, allowing me to create effective and engaging digital solutions.",
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -177,7 +180,7 @@ const Resume = () => {
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold ">{experience.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 text-justify">
                   {experience.description}
                 </p>
                 <ScrollArea className="h-[400px]">
@@ -209,7 +212,7 @@ const Resume = () => {
             <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold ">{education.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 text-justify">
                   {education.description}
                 </p>
                 <ScrollArea className="h-[400px]">
@@ -242,7 +245,7 @@ const Resume = () => {
               <div className="flex flex-col gap-[30px]">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
                   <h3 className="text-4xl font-bold">{skills.title}</h3>
-                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 text-justify">
                     {skills.description}
                   </p>
                   <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px] gap-4">
@@ -274,7 +277,7 @@ const Resume = () => {
             >
               <div className="flex flex-col gap-[30px]">
                 <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 text-justify">
                   {about.description}
                 </p>
                 <ul className="grid grid-cols-1 xl:grid-cols-1 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
@@ -284,8 +287,12 @@ const Resume = () => {
                         key={index}
                         className="flex items-center justify-start sm:justify-start gap-4"
                       >
-                        <span className="text-white/60">{about.fieldName}</span>
-                        <span className="text-lg">{about.fieldValue}</span>
+                        <div className="flex-1 justify-between">
+                          <p className="text-white/60">
+                            {about.fieldName}
+                          </p>
+                          <h3 className="text-lg">{about.fieldValue}</h3>
+                        </div>
                       </li>
                     );
                   })}
