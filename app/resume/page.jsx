@@ -20,7 +20,7 @@ import {
 
 const about = {
   title: "About me",
-  description: "Here’s a bit more about me and my journey in web development.",
+  description: "I’m Jastine Earl, a passionate web developer who began my journey with On-the-Job Training (OJT). Over the course of 11 months, I immersed myself in real-world projects, which significantly enhanced my technical skills and industry knowledge. This period of intense learning and hands-on experience led to a transition into part-time work, where I continued to refine my abilities and tackle more complex challenges. From crafting responsive front-end interfaces to developing robust back-end solutions, I am dedicated to creating high-quality web experiences and am always eager to embrace new technologies and opportunities for growth.",
   info: [
     {
       fieldName: "Name",
@@ -68,7 +68,7 @@ const education = {
   icon: "/assets/resume/cap.svg",
   title: "My education",
   description:
-    "I have a Bachelor Degree in Information Technology from NORSU, where I learned the essentials of web development and programming. My education provided me with the skills to create effective and engaging digital solutions.",
+    "I hold a Bachelor’s Degree in Information Technology from NORSU, where I gained a solid foundation in web development and programming. My education equipped me with essential skills to design and build effective and engaging digital solutions, blending technical knowledge with practical application. This academic experience not only honed my understanding of various technologies but also prepared me to tackle real-world challenges in the ever-evolving field of web development.",
   items: [
     {
       school: "Valencia National High School",
@@ -131,7 +131,7 @@ const skills = {
     },
     {
       icon: <SiMysql />,
-      name: "mysql",
+      name: "mySQL",
     },
   ],
 };
