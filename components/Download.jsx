@@ -6,7 +6,7 @@ import Social from "@/components/Social";
 
 const Download = () => {
   const downloadFile = () => {
-    const filename = "resume.docx";
+    const filename = "Resume.PDF";
     const filePath = `/${filename}`;
 
     const link = document.createElement("a");
