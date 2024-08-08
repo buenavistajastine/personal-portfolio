@@ -44,7 +44,7 @@ const Skills = () => {
           animate={{
             opacity: 1,
             transition: {
-              delay: 2.4,
+              delay: 1.4,
               duration: 0.4,
               ease: "easeIn",
             },

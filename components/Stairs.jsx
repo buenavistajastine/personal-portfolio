@@ -1,47 +1,30 @@
 import { motion } from "framer-motion";
 
-const stairAnimation = {
-  initial: {
-    top: "0%",
-  },
+// Slide-to-left animation configuration
+const slideAnimation = {
   animate: {
-    top: "100%",
+    x: "-100%",  // Slide out to the left side of the viewport
+    backgroundColor: "#000000",  // Change this to your current background color
   },
-  exit: {
-    top: ["100%", "0%"],
+  initial: {
+    x: "0%",  // Start at the original position
+    backgroundColor: "#ffffff",  // Start with a white background
   },
 };
-
-// calculate the reverse indec of the delay
-const reverseIndex = (index) => {
-    const totalSteps = 6;
-    return totalSteps - index - 1;
-  };
 
 const Stairs = () => {
   return (
     <>
-      {/* Render 6 motion divs, each representing a step of the stairs.
-          Each div will have the same animation defined by the stairAnimation object.
-          The delay for each div is calculated dynamically based on its reverse index,
-          creating a staggered effect with decreasing delay for each subsequent step. */}
-      {[...Array(6)].map((_, index) => {
-        return (
-          <motion.div
-            key={index}
-            variants={stairAnimation}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-            transition={{
-              duration: 0.4,
-              ease: "easeInOut",
-              delay: reverseIndex(index) * 0.1,
-            }}
-            className="h-full w-full bg-white relative"
-          />
-        );
-      })}
+      {/* Render a single motion div that slides to the left */}
+      <motion.div
+        initial={slideAnimation.initial}
+        animate={slideAnimation.animate}
+        transition={{
+          x: { duration: 0.4, ease: "easeInOut" },  // Slide transition
+          backgroundColor: { duration: 0.4, ease: "easeInOut" },  // Background color transition
+        }}
+        className="h-full w-full relative"  // Full width and height
+      />
     </>
   );
 };

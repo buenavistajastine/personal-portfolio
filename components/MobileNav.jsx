@@ -21,7 +21,7 @@ const MobileNav = () => {
     // Delay closing the Sheet by 2 seconds (2000 milliseconds)
     setTimeout(() => {
       setIsOpen(false);
-    }, 500);
+    }, 200);
   };
 
   return (
@@ -32,7 +32,7 @@ const MobileNav = () => {
       <SheetContent className="flex flex-col">
         {/* Logo */}
         <div className="mt-32 mb-20 text-center text-2xl">
-          <Link href={"/"}>
+          <Link onClick={handleLinkClick} href={"/"}>
             <h1 className="text-4xl font-semibold">
               Earl <span className="text-accent">.</span>
             </h1>

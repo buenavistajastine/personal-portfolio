@@ -2,7 +2,7 @@ import Link from "next/link";
 import { FaGithub, FaFacebook} from "react-icons/fa";
 
 const socials = [
-    {icon: <FaGithub />, path: ''},
+    {icon: <FaGithub />, path: 'https://github.com/buenavistajastine'},
     {icon: <FaFacebook />, path: 'https://www.facebook.com/jastine.buenavista.56?mibextid=ZbWKwL'},
 ];
 
